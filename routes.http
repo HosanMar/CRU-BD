@@ -1,0 +1,49 @@
+POST http://localhost:3000/dispositivos
+Content-Type: application/json
+
+ {
+    "dispositivotemp": 21,
+    "dispositivoumi": 60,
+    "dispositivoco": 0,
+    "dispositivoc02": 2,
+    "dispositivopart": 0,
+    "dispositivoilum": 70,
+    "dispositivoruid": 24,
+    "dispositivodata": "29/07/25", 
+    "dispositivohora": "00:40",
+    "dispositivoambiente": 33
+ }
+
+
+###
+
+GET http://localhost:3000/dispositivos
+
+###
+
+GET http://localhost:3000/dispositivos/39
+
+
+###
+
+PUT http://localhost:3000/dispositivos/39
+Content-Type: application/json
+
+{
+  "dispositivotemp": 26,
+  "dispositivoumi": 66,
+  "dispositivoco": 0.5,
+  "dispositivoc02": 1.9,
+  "dispositivopart": 218,
+  "dispositivoilum": 709,
+  "dispositivoruid": 27,
+  "dispositivodata": "2025-06-10T03:00:00.000Z",
+  "dispositivohora": "08:00:00",
+  "dispositivoambiente":30 
+}
+
+### 
+
+DELETE  http://localhost:3000/dispositivos/41
+
+
