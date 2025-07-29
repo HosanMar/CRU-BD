@@ -2,6 +2,7 @@ import express from 'express';
 import {
   getAllDispositivos,
   getDispositivoById,
+  getDispositivosByAmbiente,
   createDispositivo,
   updateDispositivo,
   deleteDispositivo
@@ -12,6 +13,11 @@ const router = express.Router();
 router.get('/', async (req, res) => {
   const data = await getAllDispositivos();
   res.json(data);
+});
+
+router.get('/ambiente/:ambienteId', async (req, res) => {
+  const dispositivos = await getDispositivosByAmbiente(req.params.ambienteId);
+  res.json(dispositivos);
 });
 
 router.get('/:id', async (req, res) => {

@@ -10,6 +10,14 @@ export const getDispositivoById = async (id) => {
   return res.rows[0];
 };
 
+export const getDispositivosByAmbiente = async (ambienteId) => {
+  const res = await pool.query(
+    'SELECT * FROM dispositivo WHERE dispositivoambiente = $1 ORDER BY dispositivoid',
+    [ambienteId]
+  );
+  return res.rows;
+};
+
 export const createDispositivo = async (data) => {
   const {
     dispositivotemp,

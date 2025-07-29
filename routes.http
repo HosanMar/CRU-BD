@@ -2,7 +2,7 @@ POST http://localhost:3000/dispositivos
 Content-Type: application/json
 
  {
-    "dispositivotemp": 21,
+    "dispositivotemp": 35,
     "dispositivoumi": 60,
     "dispositivoco": 0,
     "dispositivoc02": 2,
@@ -17,7 +17,11 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:3000/dispositivos
+GET http://localhost:3000/dispositivos/ambiente/31
+
+###
+
+GET http://localhost:3000/dispositivos/39
 
 ###
 
@@ -25,6 +29,7 @@ GET http://localhost:3000/dispositivos/39
 
 
 ###
+
 
 PUT http://localhost:3000/dispositivos/39
 Content-Type: application/json
@@ -46,4 +51,19 @@ Content-Type: application/json
 
 DELETE  http://localhost:3000/dispositivos/41
 
+###
 
+GET http://localhost:3000/notificacao/dispositivo/39
+
+###
+
+GET http://localhost:3000/notificacao/1
+
+###
+
+GET http://localhost:3000/notificacao
+
+
+###
+
+DELETE  http://localhost:3000/notificacao/41
