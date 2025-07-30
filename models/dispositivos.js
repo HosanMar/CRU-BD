@@ -9,10 +9,10 @@ export const getDispositivoById = async (id) => {
   const res = await pool.query('SELECT * FROM dispositivo WHERE dispositivoid = $1', [id]);
   return res.rows[0];
 };
-
+   
 export const getDispositivosByAmbiente = async (ambienteId) => {
   const res = await pool.query(
-    'SELECT * FROM dispositivo WHERE dispositivoambiente = $1 ORDER BY dispositivoid',
+    'SELECT * FROM dispositivo WHERE dispositivoambiente = $1 ORDER BY dispositivo  id',
     [ambienteId]
   );
   return res.rows;
